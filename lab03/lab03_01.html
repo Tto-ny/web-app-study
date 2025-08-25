@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+    let food = [
+        {
+            id: "00001",
+            name: "Pasta Place",
+            type: "Italian",
+            rating: 4.5,
+        },
+        {
+            id: "00002",
+            name: "Taco Town",
+            type: "Mexican",
+            rating: 3.8,
+        },
+        {
+            id: "00003",
+            name: "Burger Barn",
+            type: "American",
+            rating: 4.2,
+        },
+        {
+            id: "00004",
+            name: "Sushi",
+            type: "Japanese",
+            rating: 4.9,
+        },
+        {
+            id: "00005",
+            name: "Curry Corner",
+            type: "Indian",
+            rating: 4.1,
+        }
+    ];
+
+    for (let i in food) {
+        let item = food[i];
+
+        if (item.type === "Italian") {
+            console.log(`${item.name} is an Italian food.`);
+        } else if (item.type === "Mexican") {
+            console.log(`${item.name} is a Mexican food.`);
+        } else {
+            console.log(`${item.name} is another type of food.`);
+        }
+
+        if (item.rating > 4.5) {
+            console.log(`${item.name} has an excellent rating.`);
+        } else {
+            console.log(`${item.name} has a good rating.`);
+        }
+    }
+
+    
+    </script>
+</body>
+</html>

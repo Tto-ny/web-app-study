@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+    <!-- <script>
+
+        $(document).ready(function () {
+            $("#add-button").click(function () {
+                let text = $("#input-text").val()
+                    if (text.trim() !== "") {
+                        let listItem = `${text.trim()}\n`
+                        $("#list-container").append(listItem)
+                        $("#input-text").val("")
+                    } else {
+                        alert("กรุณากรอกชื่อกิจกรรมออกกําลังกาย!")
+                    }
+            })
+        })
+
+    </script> -->
+
+</head>
+
+<body>
+    <h2>ระบบเพิ่มกิจกรรมฟิตเนส</h2>
+
+
+
+    ชื่อกิจกรรม: <input type="text" id="input-text">
+    <button id="add-button" onclick="addActivity()">เพิ่มกิจกรรม</button>
+    <p></p>
+    รายกิจกรรม: <br>
+
+    <textarea id="list-container" rows="10" cols="40"></textarea>
+
+    <script>
+        function addActivity(){
+            let input_text = document.getElementById("input-text")
+            let list_text = document.getElementById("list-container")
+
+            if(input_text.value.trim() === ""){
+                alert("กรุณากรอกชื่อกิจกรรมออกกําลังกาย!");
+                list_text.value = input_text.value.trim();
+            }
+            else{
+                list_text.value += input_text.value.trim() + "\n";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

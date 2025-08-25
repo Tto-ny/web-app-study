@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>แบบฟอร์มสมัครสมาชิก Fitness Club</h1>
+    <p></p>
+    ชื่อ-นามสกุล:<br>
+    <input type="text" id="input-name" onblur="checkFullName()"> <p></p>
+    เลขบัตรประชาชน:<br>
+    <input type="number" id="input-personal-num" onblur="checkIdCard()"> <p></p>
+    อีเมล:<br>
+    <input type="text" id="input-email" onblur="checkEmail()"> <p></p>
+    เบอร์โทรศัพท์:<br>
+    <input type="number" id="input-phone" onblur="checkPhone()"> <p></p>
+    แพ็คเกจสมัครสมาชิก:<br>
+
+    <select id="Fitness-select" name="Fitness-select">
+    <option value="Select_a_pack" >-- กรุณาเลือก --</option>
+    <option value="Basic" > Basic </option>
+    <option value="Premium"> Premium </option>
+    <option value="Platinum"> Platinum </option>
+    </select><p></p>
+    <button id="submit-fitness" onclick="validateForm()">สมัครสมาชิก</button>
+
+    <script>
+        function checkFullName(){
+            let input_name = document.getElementById("input-name");
+            if(input_name.value.trim() === "")
+                alert("กรุณากรอกชื่อ – นามสกุล")
+        }
+
+        function checkIdCard(){
+            let input_personal_num = document.getElementById("input-personal-num");
+            if(input_personal_num.value.length !== 13)
+                alert("เลขบัตรประชาชนต้องมี 13 หลัก")
+        }
+
+        function checkEmail(){
+            let input_email = document.getElementById("input-email");
+            if(input_email.value.trim() === "")
+                alert("กรุณากรอกอีเมล")
+        }
+
+        function checkPhone(){
+            let input_phone = document.getElementById("input-phone");
+            if(input_phone.value.length !== 10)
+                alert("เบอร์โทรศัพท์ต้องมีทั้งหมด 10 หลัก")
+
+        }
+
+        function validateForm(){
+            let submit_fitness = document.getElementById("submit-fitness");
+            let input_name = document.getElementById("input-name");
+            let input_personal_num = document.getElementById("input-personal-num");
+            let input_email = document.getElementById("input-email");
+            let input_phone = document.getElementById("input-phone");
+            let Fitness_select = document.getElementById("Fitness-select");
+
+
+            if(input_name.value.trim() === "")
+                alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง")
+            else if(input_personal_num.value.length !== 13)
+                alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง")
+            else if(input_email.value.trim() === "")
+                alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง")
+            else if(input_phone.value.length !== 10)
+                alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง")
+            else if(Fitness_select.value === "Select_a_pack")
+                alert("กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง")
+            else
+                alert("สมัครสมาชิกสําเร็จ")
+                console.log(`ชื่อ: ${input_name.value.trim()}\n`)
+                console.log(`เลขบัตรประชาชน: ${input_personal_num.value}\n`)
+                console.log(`อีเมล: ${input_email.value.trim()}\n`)
+                console.log(`เบอร์โทร: ${input_phone.value}\n`)
+                console.log(`แพ็กเกจ: ${Fitness_select.value}`)
+            
+        }
+
+
+    </script>
+</body>
+</html>

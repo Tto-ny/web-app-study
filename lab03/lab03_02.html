@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateCircleArea(r){
+            let cir = Math.PI * r * r 
+            return cir
+        }
+
+        function greetPersonWithAge(name,age){
+
+            console.log(`Hello, ${name}! You are ${age} years old.`)
+
+        }
+        
+        function checkEvenOrOdd(n){
+            
+            if (n%2 != 0){
+                console.log("The number is odd.")
+            }
+            else if (n%2 == 0){
+                console.log("The number is even.")
+            }
+
+
+    
+        }
+
+
+    console.log(calculateCircleArea(5));
+    greetPersonWithAge("วรพันธุ์ คำทะเนตร", 22);
+    checkEvenOrOdd(7);
+    checkEvenOrOdd(2);
+
+    </script>
+</body>
+</html>
