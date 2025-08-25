@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>แบบฟอร์มจองที่นั่งกิจกรรม</h2>
+    <form method="post" action="seat_booking_result.php">
+
+    ชื่อผู้จอง:<input type="text" name="names" required>
+    <p></p>
+    เลือกที่นั่ง: <br>
+    <input type="checkbox" name="seat[]" value="A1">
+    <label for="A1">A1</label>
+    <input type="checkbox" name="seat[]" value="A2">
+    <label for="A2">A2</label>
+    <input type="checkbox" name="seat[]" value="A3">
+    <label for="A3">A3</label>
+    <input type="checkbox" name="seat[]" value="A4">
+    <label for="A4">A4</label>
+    <input type="checkbox" name="seat[]" value="A5">
+    <label for="A5">A5</label>
+    <p></p>
+    <button type="submit">ยืนยันการจอง</button>
+
+    </form>
+</body>
+</html>
