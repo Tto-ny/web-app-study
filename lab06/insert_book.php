@@ -14,7 +14,7 @@
     $dbname = "ai_lab06";
     $conn = mysqli_connect($host, $user, $password, $dbname);
     if($conn){
-        if(isset($_POST["title"]) && isset($_POST["author"]) && isset($_POST["year"])){
+        if(isset($_POST["title"]) && isset($_POST["author"]) && isset($_POST["year"]) && isset($_POST["category"])){
             $title = $_POST["title"];
             $author = $_POST["author"];
             $year = $_POST["year"];
